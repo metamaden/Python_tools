@@ -1,0 +1,15 @@
+import subprocess
+import os
+import fnmatch
+ 
+input_file_tag = input("what is the input file ext?")
+output_file_tag = input("what is the output file ext?")
+ 
+ 
+for file in ".":
+    if fnmatch.fnmatch(file, '*.csv'):
+        inputname = "certificate-export.csv"
+        i = "_ascii-only.csv
+        outputname = str(inputname% % i)
+        process_to_call = "LC_CTYPE=C tr -cd '\11\12\15\40-\176' <"+inputname+"> "+outputname
+        subprocess.call(process_to_call, shell="TRUE")
