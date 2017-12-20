@@ -18,5 +18,8 @@ python -c "import sys; print(sys.path)"
 py -m pip install -U pip
 python -m pip install -U pip
 
+# Update setuptools
+py -m pip install --upgrade setuptools
+
 # Install dependancies for MACS2, including Numpy and MS Visual C++ v9+
 py -m pip install numpy
